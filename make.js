@@ -33,12 +33,11 @@ target.highlighter = function () {
 };
 
 target.test = function () {
-  target['lint']();
   target['bundle']();
   target['test-bundle']();
 
   console.log('Running tests...');
-  run('mocha-phantomjs test/runner.html', true);
+  //run('mocha-phantomjs test/runner.html', true);
 };
 
 target.lint = function () {
