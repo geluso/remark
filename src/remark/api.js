@@ -8,6 +8,7 @@ var EventEmitter = require('events').EventEmitter
   , DefaultController = require('./controllers/defaultController')
   , Dom = require('./dom')
   , macros = require('./macros')
+  , remarkable = require('./remarkable')
   ;
 
 module.exports = Api;
@@ -52,6 +53,8 @@ Api.prototype.create = function (options, callback) {
     }
   });
 
+  remarkable.process();
+  
   return slideshow;
 };
 
